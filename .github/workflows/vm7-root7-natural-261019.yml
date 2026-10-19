@@ -18,7 +18,7 @@ jobs:
       github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     env:
-      MERGIFY_TOKEN: ${{ vars.MERGIFY_TOKEN_ROOT7_NATURAL }}
+      MERGIFY_TOKEN: ${{ secrets.MERGIFY_TOKEN }}
       MERGIFY_TEST_JOB_NAME: vm7-root7-natural-test-261019
     steps:
       - name: Install exact supported Test Engine client
